@@ -1,0 +1,789 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tailwind App</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link href="./src/css/output.css" rel="stylesheet">
+</head>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+    .text-shimmer {
+        animation: shimmer 2s infinite linear;
+    }
+
+    @keyframes shimmer {
+        0% {
+            background-position: -500px 0;
+        }
+
+        100% {
+            background-position: 500px 0;
+        }
+    }
+
+    .floating {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .breathing {
+        animation: breathe 4s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+
+        0%,
+        100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+    }
+</style>
+
+<body class="">
+    <div class="relative overflow-hidden text-white lg:min-h-screen">
+
+        <!-- Background Image -->
+        <div class="absolute inset-0 parallax-element" data-speed="0.5" style="
+  background-image: url('./assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;">
+        </div>
+        <!-- <div class="absolute inset-0 bg-black/60"></div> -->
+        <div class="absolute inset-0 image-overlay"></div>
+        <!-- Floating Elements -->
+        <div class="absolute top-1/4 right-1/4 w-72 h-72 bg-white/10 rounded-full blur-3xl floating parallax-element"
+            data-speed="0.3"></div>
+        <div class="absolute bottom-1/4 left-1/4 w-96 h-96 bg-green-500/20 rounded-full blur-3xl breathing parallax-element"
+            data-speed="0.7"></div>
+        <!-- <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2238%22%20height%3D%2238%22%20stroke%3D%22white%22%20stroke-opacity%3D%220.03%22/%3E%3C/svg%3E')] bg-repeat parallax-element"
+            data-speed="0.2"></div> -->
+
+        <!-- Content -->
+        <div class="relative max-w-4xl mx-auto px-6 py-[140px] lg:pt-[200px] lg:py-28 text-center z-10">
+            <div class="flex items-center justify-center gap-2 mb-6">
+                <div
+                    class="flex items-center gap-1 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    Real Experience
+                </div>
+                <div
+                    class="flex items-center gap-1 bg-green-500/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
+                    <i data-lucide="trending-up" class="w-4 h-4"></i>
+                    Verified Results
+                </div>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                How I Started Earning
+                <span class="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent text-shimmer">
+                    Extra Income
+                </span>
+                From Home
+            </h1>
+
+            <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+                A realistic approach to making money online that actually works —
+                in your spare time, without special skills.
+            </p>
+
+            <div class="flex items-center justify-center gap-2 text-white/80">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+                <span class="text-lg">5 minute read • Real story • No hype</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 -mt-16 relative z-10">
+        <div class="gradient-card rounded-3xl shadow-large border border-white/20 p-8 lg:p-12 hover-lift scale-in">
+            <div class="text-center">
+                <div
+                    class="inline-flex items-center gap-2 bg-success/10 text-success px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                    <i data-lucide="check-circle" class="w-4 h-4"></i>
+                    My First Month Results
+                </div>
+
+                <div class="relative">
+                    <div
+                        class="text-6xl lg:text-8xl font-bold gradient-success bg-clip-text text-transparent mb-4 floating">
+                        $127
+                    </div>
+                    <div class="absolute -top-2 -right-2 lg:-top-4 lg:-right-4">
+                        <i data-lucide="dollar-sign" class="w-8 h-8 lg:w-12 lg:h-12 text-success/30"></i>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-4 text-muted-foreground">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="clock" class="w-5 h-5"></i>
+                        <span class="text-lg">~1 hour/day</span>
+                    </div>
+                    <div class="w-1 h-1 bg-muted-foreground rounded-full"></div>
+                    <span class="text-lg">During commute & lunch breaks</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                    <div class="text-center bounce-in stagger-1">
+                        <div class="text-2xl font-bold text-foreground">23</div>
+                        <div class="text-sm text-muted-foreground">Surveys Completed</div>
+                    </div>
+                    <div class="text-center bounce-in stagger-2">
+                        <div class="text-2xl font-bold text-foreground">$5.52</div>
+                        <div class="text-sm text-muted-foreground">Average per Survey</div>
+                    </div>
+                    <div class="text-center bounce-in stagger-3">
+                        <div class="text-2xl font-bold text-foreground">15min</div>
+                        <div class="text-sm text-muted-foreground">Average Time</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-20 bg-white relative overflow-hidden">
+
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 space-y-12">
+            <!-- Introduction -->
+            <div class="space-y-6">
+                <p class="text-xl leading-relaxed text-gray-600">
+                    Like many people, I was skeptical about making money online. I'd seen countless ads promising
+                    unrealistic
+                    earnings, and frankly, I didn't believe any of them. But last year, while dealing with some
+                    unexpected
+                    expenses, I decided to give it a try.
+                </p>
+                <p class="text-xl leading-relaxed text-gray-600">
+                    I wasn't looking to get rich quick or replace my full-time job. I just wanted to earn a little extra
+                    cash
+                    during my free time - maybe enough to cover my monthly streaming subscriptions or help with
+                    groceries.
+                    What I discovered was both simpler and more legitimate than I expected.
+                </p>
+            </div>
+
+            <!-- Reality Check -->
+            <div class="bg-orange-50 border border-orange-200 rounded-2xl p-8">
+                <div class="flex items-start gap-4">
+                    <i data-lucide="shield" class="w-8 h-8 text-orange-600"></i>
+                    <div>
+                        <h2 class="text-2xl font-bold text-orange-900 mb-4">The Reality Check</h2>
+                        <p class="text-lg text-orange-800 leading-relaxed">
+                            Let me be clear from the start: this isn't about making thousands of dollars overnight.
+                            Anyone promising
+                            that is probably trying to sell you something. What I found was a way to earn modest but
+                            consistent
+                            income by sharing my opinions through paid surveys.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What Makes This Different -->
+            <div>
+                <h2 class="text-3xl font-bold mb-8 text-center">What Makes This Different</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div
+                        class="text-center p-6 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 hover-lift">
+                        <i data-lucide="users" class="w-10 h-10 text-blue-600 mx-auto mb-4 rotate-in"></i>
+                        <h3 class="font-semibold text-blue-900 mb-2">No Special Skills</h3>
+                        <p class="text-sm text-blue-700">Just your honest opinions matter</p>
+                    </div>
+                    <div
+                        class="text-center p-6 rounded-xl bg-gradient-to-br from-green-50 to-green-100 border border-green-200 hover-lift">
+                        <i data-lucide="zap" class="w-10 h-10 text-green-600 mx-auto mb-4 rotate-in"></i>
+                        <h3 class="font-semibold text-green-900 mb-2">Flexible Timing</h3>
+                        <p class="text-sm text-green-700">Work whenever you want</p>
+                    </div>
+                    <div
+                        class="text-center p-6 rounded-xl bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 hover-lift">
+                        <i data-lucide="shield" class="w-10 h-10 text-purple-600 mx-auto mb-4 rotate-in"></i>
+                        <h3 class="font-semibold text-purple-900 mb-2">Legitimate</h3>
+                        <p class="text-sm text-purple-700">Real companies, real payments</p>
+                    </div>
+                    <div
+                        class="text-center p-6 rounded-xl bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200 hover-lift">
+                        <i data-lucide="target" class="w-10 h-10 text-orange-600 mx-auto mb-4 rotate-in"></i>
+                        <h3 class="font-semibold text-orange-900 mb-2">Simple</h3>
+                        <p class="text-sm text-orange-700">No complicated setup required</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <p class="text-lg leading-relaxed text-gray-600">
+                        I've tried various ways to earn money online before, but most were either too complicated,
+                        required
+                        special skills, or simply didn't pay well. What attracted me to survey platforms was the
+                        simplicity - no
+                        special knowledge required, flexible timing, and legitimate companies behind them.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-600">
+                        The surveys I complete cover everything from my shopping habits to opinions on new product
+                        designs. Some
+                        take just 5 minutes, others might take 20-30 minutes, but they all pay fairly for the time
+                        invested.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Concept Explanation -->
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-8">
+                <p class="text-lg leading-relaxed text-slate-700">
+                    The concept is straightforward - companies need consumer feedback to improve their products and
+                    services.
+                    Instead of hiring expensive market research firms, they're willing to pay regular people like you
+                    and me
+                    for our honest opinions.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- testimonial-card.html -->
+    <section class="py-28 bg-white relative overflow-hidden"
+        style="  background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url('https://themestate.com/demo/geopoint/wp-content/uploads/2024/01/pexels-alfo-medeiros-11624976.jpg');background-attachment: fixed;">
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div
+                class="relative bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 rounded-2xl hover-lift p-8 lg:p-12 hover:shadow-xl transition-all duration-300">
+
+                <!-- Quote icon -->
+                <div class="absolute top-6 left-6">
+                    <svg class="w-10 h-10 text-slate-400" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.95 5a7 7 0 0 0-2.95 5.73V19h6v-7H7.17a4.5 4.5 0 0 1 1.78-3.49L6.95 5Zm10 0a7 7 0 0 0-2.95 5.73V19h6v-7h-2.83a4.5 4.5 0 0 1 1.78-3.49L16.95 5Z">
+                        </path>
+                    </svg>
+                </div>
+
+                <!-- Content -->
+                <div class="pt-8">
+                    <blockquote class="text-xl lg:text-2xl font-medium text-slate-800 leading-relaxed mb-6 italic">
+                        "I started doing this while watching TV in the evenings. It's not life-changing money, but it's
+                        helped me build a small emergency fund without affecting my daily routine."
+                    </blockquote>
+
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            MC
+                        </div>
+                        <div>
+                            <div class="font-semibold text-slate-900">Mike Chen</div>
+                            <div class="text-slate-600">Part-time survey taker</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-background via-background/50 to-primary/5"></div>
+        <div class="relative max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div
+                    class="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full text-primary font-medium text-sm mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 1v22M3.05 6.05l15.9 15.9M21 12H3" />
+                    </svg>
+                    How It Works
+                </div>
+                <h2
+                    class="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text text-transparent">
+                    Start Earning in 5 Simple Steps
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                    Join thousands who are already earning extra income in their spare time.
+                    No special skills required, just your honest opinions.
+                </p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-20">
+                <div class="group scale-in stagger-1 ">
+                    <div
+                        class="relative bg-card rounded-3xl p-8 border border-border/50 hover-lift hover-glow transition-all duration-500 hover-lift">
+                        <div
+                            class="absolute -top-4 left-8 bg-primary text-primary-foreground text-sm font-bold px-3 py-1 rounded-full">
+                            1</div>
+                        <div class="relative mb-6">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-user-plus w-8 h-8 text-white">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <line x1="19" x2="19" y1="8" y2="14"></line>
+                                    <line x1="22" x2="16" y1="11" y2="11"></line>
+                                </svg>
+                            </div>
+                            <div
+                                class="absolute -bottom-2 -right-2 bg-background border border-border rounded-lg px-2 py-1">
+                                <span class="text-xs font-medium text-muted-foreground">2-3 min</span>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 group-hover:text-primary transition-colors">Quick Sign-Up</h3>
+                        <p class="text-muted-foreground text-sm leading-relaxed">Create your account in under 3 minutes
+                            with just your email</p>
+                        <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
+                            <div class="w-8 h-0.5 bg-gradient-to-r from-primary/50 to-primary/20"></div>
+                            <div
+                                class="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-primary/30 rotate-45">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group scale-in stagger-2">
+                    <div
+                        class="relative bg-card rounded-3xl p-8 border border-border/50 hover-lift hover-glow transition-all duration-500">
+                        <div
+                            class="absolute -top-4 left-8 bg-primary text-primary-foreground text-sm font-bold px-3 py-1 rounded-full">
+                            2</div>
+                        <div class="relative mb-6">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-mail w-8 h-8 text-white">
+                                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                </svg>
+                            </div>
+                            <div
+                                class="absolute -bottom-2 -right-2 bg-background border border-border rounded-lg px-2 py-1">
+                                <span class="text-xs font-medium text-muted-foreground">5 min</span>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 group-hover:text-primary transition-colors">Profile Setup</h3>
+                        <p class="text-muted-foreground text-sm leading-relaxed">Tell us about your interests to get
+                            personalized surveys</p>
+                        <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
+                            <div class="w-8 h-0.5 bg-gradient-to-r from-primary/50 to-primary/20"></div>
+                            <div
+                                class="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-primary/30 rotate-45">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group scale-in stagger-3">
+                    <div
+                        class="relative bg-card rounded-3xl p-8 border border-border/50 hover-lift hover-glow transition-all duration-500">
+                        <div
+                            class="absolute -top-4 left-8 bg-primary text-primary-foreground text-sm font-bold px-3 py-1 rounded-full">
+                            3</div>
+                        <div class="relative mb-6">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-smartphone w-8 h-8 text-white">
+                                    <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                                    <path d="M12 18h.01"></path>
+                                </svg>
+                            </div>
+                            <div
+                                class="absolute -bottom-2 -right-2 bg-background border border-border rounded-lg px-2 py-1">
+                                <span class="text-xs font-medium text-muted-foreground">Same day</span>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 group-hover:text-primary transition-colors">Start Earning</h3>
+                        <p class="text-muted-foreground text-sm leading-relaxed">Get survey invitations sent directly to
+                            your phone</p>
+                        <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
+                            <div class="w-8 h-0.5 bg-gradient-to-r from-primary/50 to-primary/20"></div>
+                            <div
+                                class="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-primary/30 rotate-45">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group scale-in stagger-4">
+                    <div
+                        class="relative bg-card rounded-3xl p-8 border border-border/50 hover-lift hover-glow transition-all duration-500">
+                        <div
+                            class="absolute -top-4 left-8 bg-primary text-primary-foreground text-sm font-bold px-3 py-1 rounded-full">
+                            4</div>
+                        <div class="relative mb-6">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-timer w-8 h-8 text-white">
+                                    <line x1="10" x2="14" y1="2" y2="2"></line>
+                                    <line x1="12" x2="15" y1="14" y2="11"></line>
+                                    <circle cx="12" cy="14" r="8"></circle>
+                                </svg>
+                            </div>
+                            <div
+                                class="absolute -bottom-2 -right-2 bg-background border border-border rounded-lg px-2 py-1">
+                                <span class="text-xs font-medium text-muted-foreground">5-20 min</span>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 group-hover:text-primary transition-colors">Complete Surveys
+                        </h3>
+                        <p class="text-muted-foreground text-sm leading-relaxed">Answer questions during your free time,
+                            anywhere</p>
+                        <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
+                            <div class="w-8 h-0.5 bg-gradient-to-r from-primary/50 to-primary/20"></div>
+                            <div
+                                class="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-primary/30 rotate-45">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group scale-in stagger-5">
+                    <div
+                        class="relative bg-card rounded-3xl p-8 border border-border/50 hover-lift hover-glow transition-all duration-500">
+                        <div
+                            class="absolute -top-4 left-8 bg-primary text-primary-foreground text-sm font-bold px-3 py-1 rounded-full">
+                            5</div>
+                        <div class="relative mb-6">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-credit-card w-8 h-8 text-white">
+                                    <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                                    <line x1="2" x2="22" y1="10" y2="10"></line>
+                                </svg>
+                            </div>
+                            <div
+                                class="absolute -bottom-2 -right-2 bg-background border border-border rounded-lg px-2 py-1">
+                                <span class="text-xs font-medium text-muted-foreground">24-48 hrs</span>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 group-hover:text-primary transition-colors">Get Paid Fast</h3>
+                        <p class="text-muted-foreground text-sm leading-relaxed">Instant PayPal transfers or choose from
+                            100+ gift cards</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="text-center scale-in stagger-1">
+                    <div class="w-12 h-12 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-4"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-clock w-6 h-6 text-primary">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg></div>
+                    <h3 class="text-lg font-semibold mb-2">Flexible Schedule</h3>
+                    <p class="text-muted-foreground text-sm">Work whenever you want - morning, lunch break, or evening
+                    </p>
+                </div>
+                <div class="text-center scale-in stagger-2">
+                    <div class="w-12 h-12 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-4"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-smartphone w-6 h-6 text-primary">
+                            <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                            <path d="M12 18h.01"></path>
+                        </svg></div>
+                    <h3 class="text-lg font-semibold mb-2">Mobile Friendly</h3>
+                    <p class="text-muted-foreground text-sm">Complete surveys on your phone, tablet, or computer</p>
+                </div>
+                <div class="text-center scale-in stagger-3">
+                    <div class="w-12 h-12 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-4"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-trending-up w-6 h-6 text-primary">
+                            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                            <polyline points="16 7 22 7 22 13"></polyline>
+                        </svg></div>
+                    <h3 class="text-lg font-semibold mb-2">Growing Earnings</h3>
+                    <p class="text-muted-foreground text-sm">Higher-paying surveys become available as you gain
+                        experience</p>
+                </div>
+            </div>
+
+            <!-- Real User Experience -->
+            <div
+                class="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-3xl p-8 lg:p-12 border border-primary/10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Real User Experience</h3>
+                        <p class="text-muted-foreground leading-relaxed mb-6">
+                            "The sign-up process was incredibly straightforward - just basic demographic information
+                            to help match me with relevant surveys. Within 24 hours, I was already receiving survey
+                            invitations via email and text."
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span class="text-sm">No
+                                    pressure to complete surveys</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span class="text-sm">Skip any
+                                    survey that doesn't interest you</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div><span class="text-sm">Work
+                                    during coffee breaks, commutes, or TV time</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-white rounded-2xl p-6 border border-border shadow-lg">
+                            <div class="flex items-center mb-4">
+                                <div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
+                                <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                                <span class="text-xs text-muted-foreground ml-2">survey-platform.com</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="h-4 bg-muted rounded w-3/4"></div>
+                                <div class="h-4 bg-muted rounded w-1/2"></div>
+                                <div class="h-8 bg-primary/20 rounded"></div>
+                                <div class="flex space-x-2">
+                                    <div class="h-6 bg-muted rounded flex-1"></div>
+                                    <div class="h-6 bg-muted rounded flex-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute -top-2 -right-2 bg-primary text-white px-3 py-2 rounded-lg text-sm font-medium shadow-lg animate-bounce">
+                            +$12 earned!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Bottom Line Section -->
+    <section class="py-20 bg-background relative" style="  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    url('./assets/hero-bg.jpg');background-attachment: fixed;">
+        <!-- Parallax Background -->
+        <!-- <div class="absolute inset-0 opacity-10 parallax-element" data-speed="0.4" style="
+        background-image: url('../assets/parallax-bg2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      "></div> -->
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Heading and Paragraphs -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl text-white lg:text-5xl font-bold mb-6">The Bottom Line</h2>
+                <div class="prose prose-lg max-w-none space-y-6">
+                    <p class="text-xl leading-relaxed text-white text-muted-foreground">
+                        After eight months of doing this consistently, I've earned enough to cover several monthly
+                        expenses. It's
+                        not going to make me rich, but it's provided a nice financial cushion and required minimal
+                        effort.
+                    </p>
+                    <p class="text-xl leading-relaxed text-white text-muted-foreground">
+                        The platform I use has been reliable with payments, and I've never had any issues with spam or
+                        unwanted
+                        marketing calls. They're transparent about how much each survey pays upfront, so there are no
+                        surprises.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Key Benefits Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div
+                    class="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl hover-lift slide-in-up stagger-1">
+                    <div class="w-12 h-12 mx-auto mb-4 text-green-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path d="M13 17h8m0 0v-8m0 8l-8-8-4 4-6-6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-green-900 mb-2">Consistent Earnings</h3>
+                    <p class="text-green-700">Steady monthly income that adds up over time</p>
+                </div>
+
+                <div
+                    class="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-xl hover-lift slide-in-up stagger-2">
+                    <div class="w-12 h-12 mx-auto mb-4 text-blue-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path
+                                d="M12 2a10 10 0 00-10 10v2a4 4 0 008 0v-2a6 6 0 1112 0v2a4 4 0 008 0v-2a10 10 0 00-10-10z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-900 mb-2">Reliable Platform</h3>
+                    <p class="text-blue-700">No spam, no scams, just legitimate surveys</p>
+                </div>
+
+                <div
+                    class="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-xl hover-lift slide-in-up stagger-3">
+                    <div class="w-12 h-12 mx-auto mb-4 text-purple-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path d="M12 8v4l3 3M12 4a8 8 0 100 16 8 8 0 000-16z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-purple-900 mb-2">Minimal Effort</h3>
+                    <p class="text-purple-700">Fits perfectly into your existing routine</p>
+                </div>
+            </div>
+
+            <!-- 8-month Results Highlight -->
+            <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-2xl p-8 text-center">
+                <div class="text-sm font-semibold text-slate-300 mb-2">AFTER 8 MONTHS</div>
+                <div class="text-4xl lg:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                        Monthly Expenses Covered
+                    </span>
+                </div>
+                <p class="text-slate-300 text-lg">
+                    Built a financial cushion with minimal time investment
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <div class="max-w-4xl mx-auto px-6 py-16">
+        <div
+            class="relative overflow-hidden bg-gradient-to-br from-indigo-500 to-purple-600 rounded-3xl p-8 lg:p-12 text-white text-center">
+
+            <!-- Background Elements -->
+            <div class="absolute inset-0 custom-radial-bg opacity-5"></div>
+            <div class="absolute top-1/4 right-1/4 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-float"></div>
+            <div class="absolute bottom-1/4 left-1/4 w-40 h-40 bg-purple-400/20 rounded-full blur-2xl animate-pulse">
+            </div>
+
+            <div class="relative">
+                <!-- Rating Stars -->
+                <div class="flex items-center justify-center gap-2 mb-6">
+                    <div class="flex items-center gap-1">
+                        <svg class="w-5 h-5 text-yellow-400 fill-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.3l6.18 3.7-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.3l6.18 3.7-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.3l6.18 3.7-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.3l6.18 3.7-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400 fill-yellow-400" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.3l6.18 3.7-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                    </div>
+                    <span class="text-white/90 font-medium">4.8/5 User Rating</span>
+                </div>
+
+                <!-- Title & Description -->
+                <h2 class="text-3xl lg:text-5xl font-bold mb-6">Ready to Give It a Try?</h2>
+
+                <p class="text-xl lg:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+                    If you're looking for a simple way to earn some extra income in your spare time,
+                    this might be worth exploring. The barrier to entry is low, and you can start earning within days.
+                </p>
+
+                <!-- CTA Button -->
+                <div class="mb-8">
+                    <button
+                        class="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 text-xl font-bold rounded-full shadow-lg transition-transform transform hover:scale-105 flex items-center justify-center mx-auto">
+                        Start Taking Surveys
+                        <svg class="w-6 h-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Features List -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="flex items-center justify-center gap-2 text-white/80">
+                        <svg class="w-5 h-5 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+                        </svg>
+                        <span class="font-medium">Free to join</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-2 text-white/80">
+                        <svg class="w-5 h-5 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+                        </svg>
+                        <span class="font-medium">No special skills required</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-2 text-white/80">
+                        <svg class="w-5 h-5 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+                        </svg>
+                        <span class="font-medium">Flexible schedule</span>
+                    </div>
+                </div>
+
+                <!-- Join Info -->
+                <div class="flex items-center justify-center gap-2 mt-6 text-white/70">
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 20h5v-2a4 4 0 00-3-3.87M9 20h6M3 20h5v-2a4 4 0 013-3.87M16 7a4 4 0 11-8 0 4 4 0 018 0zm6 4a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                    <span class="text-sm">Join 50,000+ people already earning</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="mt-8 text-center">
+            <p class="text-sm text-gray-500 italic leading-relaxed max-w-3xl mx-auto">
+                <strong>Disclaimer:</strong> Earnings will vary based on survey availability and time invested. This is
+                not a
+                get-rich-quick scheme, but rather a legitimate way to earn modest supplemental income.
+            </p>
+        </div>
+    </div>
+
+</body>
+<script>
+    lucide.createIcons();
+
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        document.querySelectorAll('.parallax-element').forEach(el => {
+            const speed = parseFloat(el.getAttribute('data-speed') || '0.5');
+            const yPos = -(scrolled * speed);
+            el.style.transform = `translateY(${yPos}px)`;
+        });
+    });
+</script>
+
+</html>
